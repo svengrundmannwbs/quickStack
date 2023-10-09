@@ -4,7 +4,7 @@ import StartPage from "./pages/StartPage";
 import StudentsPage from "./pages/StudentsPage";
 import StudentAddPage from "./pages/StudentAddPage";
 import StudentEditPage from "./pages/StudentEditPage";
-import InstructorsPage from "./pages/instructorsPage";
+import InstructorsPage from "./pages/InstructorsPage";
 import InstructorAddPage from "./pages/InstructorAddPage";
 import InstructorEditPage from "./pages/InstructorEditPage";
 import RoomsPage from "./pages/RoomsPage";

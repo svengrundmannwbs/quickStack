@@ -1,0 +1,13 @@
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  padding: 10px;
+}
+
+.profileImage {
+  height: 50px;
+}

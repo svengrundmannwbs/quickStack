@@ -16,7 +16,7 @@ function RoomsPage() {
       <Row>
         <Col>
           <h1>
-            RoomsPage{"  "}
+            Rooms{"  "}
             <Link to="/room/add">
               <Button type="button" className="btn btn-success">
                 Add room

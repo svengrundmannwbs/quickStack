@@ -1,19 +1,13 @@
-# Create a little FullStackApp
+# QuickFullStack
 
-- Webservice: NodeJS, Express
+- Webservice: NodeJS, Express, express-validator, cors, dotenv, pg , nodemon
+
 - Backend: PostgreSQL
-- FrontEnd: NodeJS, React
 
-## Deployment
+- FrontEnd: NodeJS, React, Axios, Formik, Yup, React-Bootstrap
 
-### Webservice
+## Deployments
 
-Host: render.com
-
-### Backend
-
-Host: elephantSQL
-
-### FrontEnd
-
-Host: Netlify
+**Webservice** >>> render.com
+**Backend** >>> elephantSQL
+**FrontEnd** >>> Netlify

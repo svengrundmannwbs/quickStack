@@ -16,7 +16,7 @@ function BatchesPage() {
       <Row>
         <Col>
           <h1>
-            BatchesPage{"  "}
+            Batches{"  "}
             <Link to="/batch/add">
               <Button type="button" className="btn btn-success">
                 Add Batch

@@ -8,7 +8,7 @@ function StudentsPage() {
       <Row>
         <Col>
           <h1>
-            StudentsPage{"  "}
+            Students{"  "}
             <Link to="/student/add">
               <Button type="button" className="btn btn-success">
                 Add student

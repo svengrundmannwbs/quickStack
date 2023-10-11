@@ -1,6 +1,6 @@
 import { Row, Container, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import EditInstructor from "../components/EditInstructor";
+import AddEditInstructor from "../components/AddEditInstructor";
 
 function InstructorEditPage() {
   const { id } = useParams();
@@ -8,12 +8,7 @@ function InstructorEditPage() {
     <Container>
       <Row>
         <Col>
-          <h1>Instructor EditPage {id}</h1>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <EditInstructor id={id} />
+          <AddEditInstructor id={id} />
         </Col>
       </Row>
     </Container>

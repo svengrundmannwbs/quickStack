@@ -16,7 +16,7 @@ function InstructorsPage() {
       <Row>
         <Col>
           <h1>
-            InstructorPages{"  "}
+            Instructors{"  "}
             <Link to="/instructor/add">
               <Button type="button" className="btn btn-success">
                 Add instructor

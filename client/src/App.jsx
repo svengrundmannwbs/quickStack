@@ -41,7 +41,6 @@ function App() {
           <Route path="batch/add" element={<NotImplemented />} />
           <Route path="batch/edit/:id" element={<NotImplemented />} />
           <Route path="batch/delete/:id" element={<NotImplemented />} />
-          //404
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>

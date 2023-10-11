@@ -16,7 +16,7 @@ function CoursesPage() {
       <Row>
         <Col>
           <h1>
-            CoursesPage{"  "}
+            Courses{"  "}
             <Link to="/course/add">
               <Button type="button" className="btn btn-success">
                 Add Course

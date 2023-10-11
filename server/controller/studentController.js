@@ -44,7 +44,7 @@ export const addStudent = async (req, res) => {
 //PUT single
 export const updateStudent = async (req, res) => {
   const { id } = req.params;
-  const { lastname, firstname, city } = req.body.updateStudent;
+  const { firstname, lastname, city } = req.body.updateStudent;
   try {
     const result = await pool.query(
       "UPDATE students SET lastname = $1, firstname = $2, city = $3 WHERE id = $4 RETURNING *;",

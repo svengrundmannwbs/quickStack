@@ -9,5 +9,7 @@
 ## Deployments
 
 **Webservice** >>> render.com
+
 **Backend** >>> elephantSQL
+
 **FrontEnd** >>> Netlify

@@ -1,6 +1,6 @@
 import { Row, Container, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import AddEditStudent from "../components/AddEditStudent";
+import AddEditStudent from "./AddEditStudent";
 
 function StudentEditPage() {
   const { id } = useParams();

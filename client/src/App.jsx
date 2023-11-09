@@ -1,16 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import StartPage from "./pages/StartPage";
-import StudentsPage from "./pages/StudentsPage";
-import StudentAddPage from "./pages/StudentAddPage";
-import StudentEditPage from "./pages/StudentEditPage";
-import InstructorsPage from "./pages/InstructorsPage";
-import InstructorAddPage from "./pages/InstructorAddPage";
-import InstructorEditPage from "./pages/InstructorEditPage";
-import RoomsPage from "./pages/RoomsPage";
-import CoursesPage from "./pages/CoursesPage";
-import BatchesPage from "./pages/BatchesPage";
 import NavBar from "./components/NavBar";
+import StartPage from "./pages/StartPage";
+import StudentsPage from "./features/students/Students";
+import StudentAddPage from "./features/students/components/StudentAddPage";
+import StudentEditPage from "./features/students/components/StudentEditPage";
+import InstructorsPage from "./features/instructors/Instructors";
+import InstructorAddPage from "./features/instructors/components/InstructorAddPage";
+import InstructorEditPage from "./features/instructors/components/InstructorEditPage";
+import RoomsPage from "./features/rooms/Rooms";
+import CoursesPage from "./features/courses/Courses";
+import BatchesPage from "./features/batches/Batches";
 import NotImplemented from "./pages/NotImplemented";
 import Error404 from "./pages/Error404";
 import "bootstrap/dist/css/bootstrap.min.css";

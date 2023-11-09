@@ -1,16 +1,16 @@
 import { Row, Col, Container } from "react-bootstrap";
-import AddEditInstructor from "../components/AddEditInstructor";
+import AddEditStudent from "./AddEditStudent";
 
-function InstructorAddPage() {
+function StudentAddPage() {
   return (
     <Container>
       <Row>
         <Col>
-          <AddEditInstructor />
+          <AddEditStudent />
         </Col>
       </Row>
     </Container>
   );
 }
 
-export default InstructorAddPage;
+export default StudentAddPage;

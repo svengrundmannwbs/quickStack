@@ -152,7 +152,7 @@ const AddEditStudent = ({ id }) => {
               <Col></Col>
               <Col>
                 <Link
-                  to={isAddMode ? "/students" : "/students"}
+                  to={isAddMode ? "/student" : "/student"}
                   className="btn btn-link"
                 >
                   <button className="btn btn-secondary">Cancel</button>

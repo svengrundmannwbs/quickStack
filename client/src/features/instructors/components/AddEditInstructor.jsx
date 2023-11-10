@@ -15,9 +15,8 @@ const AddEditInstructor = ({ id }) => {
         .post(import.meta.env.VITE_AXIOS_BASE + "instructor/add/", {
           newInstructor,
         })
-        .then(navigate("/instructors"))
+        .then(navigate("/instructor"))
         .catch((error) => {
-          setSubmitting(false);
           console.log(error);
         });
     }, 1000);
@@ -29,9 +28,8 @@ const AddEditInstructor = ({ id }) => {
         .put(import.meta.env.VITE_AXIOS_BASE + `instructor/update/${id}`, {
           updateInstructor,
         })
-        .then(navigate("/instructors"))
+        .then(navigate("/instructor"))
         .catch((error) => {
-          setSubmitting(false);
           console.log(error);
         });
     }, 1000);
@@ -154,7 +152,7 @@ const AddEditInstructor = ({ id }) => {
               <Col></Col>
               <Col>
                 <Link
-                  to={isAddMode ? "/instructors" : "/instructors"}
+                  to={isAddMode ? "/instructor" : "/instructor"}
                   className="btn btn-link"
                 >
                   <button className="btn btn-secondary">Cancel</button>

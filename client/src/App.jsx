@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { AuthProvider } from "./context/AuthContext";
+import AuthCheck from "./components/AuthCheck";
 import NavBar from "./components/NavBar";
 import StartPage from "./pages/StartPage";
 import StudentsPage from "./features/students/Students";
@@ -11,7 +12,9 @@ import InstructorEditPage from "./features/instructors/components/InstructorEdit
 import RoomsPage from "./features/rooms/Rooms";
 import CoursesPage from "./features/courses/Courses";
 import BatchesPage from "./features/batches/Batches";
-import NotImplemented from "./pages/NotImplemented";
+import NotImplemented from "./components/NotImplemented";
+import Dashboard from "./components/Dashboard";
+import Unauthorized from "./components/Unauthorized";
 import Error404 from "./pages/Error404";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -19,41 +22,47 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/">
-          <Route index element={<StartPage />} />
-        </Route>
-        <Route path="student">
-          <Route index element={<StudentsPage />} />
-          <Route path="add" element={<StudentAddPage />} />
-          <Route path="edit/:id" element={<StudentEditPage />} />
-        </Route>
-        <Route path="instructor">
-          <Route index element={<InstructorsPage />} />
-          <Route path="add" element={<InstructorAddPage />} />
-          <Route path="edit/:id" element={<InstructorEditPage />} />
-        </Route>
-        <Route path="room">
-          <Route index element={<RoomsPage />} />
-          <Route path="add" element={<NotImplemented />} />
-          <Route path="edit/:id" element={<NotImplemented />} />
-          <Route path="delete/:id" element={<NotImplemented />} />
-        </Route>
-        <Route path="course">
-          <Route index element={<CoursesPage />} />
-          <Route path="add" element={<NotImplemented />} />
-          <Route path="edit/:id" element={<NotImplemented />} />
-          <Route path="delete/:id" element={<NotImplemented />} />
-        </Route>
-        <Route path="batch">
-          <Route index element={<BatchesPage />} />
-          <Route path="add" element={<NotImplemented />} />
-          <Route path="edit/:id" element={<NotImplemented />} />
-          <Route path="delete/:id" element={<NotImplemented />} />
-        </Route>
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+      <AuthProvider>
+        <NavBar />
+        <Routes>
+          <Route path="/">
+            <Route index element={<StartPage />} />
+          </Route>
+          <Route path="student">
+            <Route index element={<StudentsPage />} />
+            <Route path="add" element={<StudentAddPage />} />
+            <Route path="edit/:id" element={<StudentEditPage />} />
+          </Route>
+          <Route path="instructor">
+            <Route index element={<InstructorsPage />} />
+            <Route path="add" element={<InstructorAddPage />} />
+            <Route path="edit/:id" element={<InstructorEditPage />} />
+          </Route>
+          <Route path="room">
+            <Route index element={<RoomsPage />} />
+            <Route path="add" element={<NotImplemented />} />
+            <Route path="edit/:id" element={<NotImplemented />} />
+            <Route path="delete/:id" element={<NotImplemented />} />
+          </Route>
+          <Route path="course">
+            <Route index element={<CoursesPage />} />
+            <Route path="add" element={<NotImplemented />} />
+            <Route path="edit/:id" element={<NotImplemented />} />
+            <Route path="delete/:id" element={<NotImplemented />} />
+          </Route>
+          <Route path="batch">
+            <Route index element={<BatchesPage />} />
+            <Route path="add" element={<NotImplemented />} />
+            <Route path="edit/:id" element={<NotImplemented />} />
+            <Route path="delete/:id" element={<NotImplemented />} />
+          </Route>
+          <Route element={<AuthCheck allowedRoles={["Admin"]} />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="unauthorized" element={<Unauthorized />} />
+          </Route>
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

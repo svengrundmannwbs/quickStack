@@ -15,7 +15,7 @@ const AddEditStudent = ({ id }) => {
         .post(import.meta.env.VITE_AXIOS_BASE + "student/add/", {
           newStudent,
         })
-        .then(navigate("/students"))
+        .then(navigate("/student"))
         .catch((error) => {
           console.log(error);
         });
@@ -28,9 +28,8 @@ const AddEditStudent = ({ id }) => {
         .put(import.meta.env.VITE_AXIOS_BASE + `student/update/${id}`, {
           updateStudent,
         })
-        .then(navigate("/students"))
+        .then(navigate("/student"))
         .catch((error) => {
-          setSubmitting(false);
           console.log(error);
         });
     }, 1000);

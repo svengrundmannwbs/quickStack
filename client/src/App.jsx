@@ -23,26 +23,36 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<StartPage />} />
-          <Route path="students" element={<StudentsPage />} />
-          <Route path="student/add" element={<StudentAddPage />} />
-          <Route path="student/edit/:id" element={<StudentEditPage />} />
-          <Route path="instructors" element={<InstructorsPage />} />
-          <Route path="instructor/add" element={<InstructorAddPage />} />
-          <Route path="instructor/edit/:id" element={<InstructorEditPage />} />
-          <Route path="rooms" element={<RoomsPage />} />
-          <Route path="room/add" element={<NotImplemented />} />
-          <Route path="room/edit/:id" element={<NotImplemented />} />
-          <Route path="room/delete/:id" element={<NotImplemented />} />
-          <Route path="courses" element={<CoursesPage />} />
-          <Route path="course/add" element={<NotImplemented />} />
-          <Route path="course/edit/:id" element={<NotImplemented />} />
-          <Route path="course/delete/:id" element={<NotImplemented />} />
-          <Route path="batches" element={<BatchesPage />} />
-          <Route path="batch/add" element={<NotImplemented />} />
-          <Route path="batch/edit/:id" element={<NotImplemented />} />
-          <Route path="batch/delete/:id" element={<NotImplemented />} />
-          <Route path="*" element={<Error404 />} />
         </Route>
+        <Route path="student">
+          <Route index element={<StudentsPage />} />
+          <Route path="add" element={<StudentAddPage />} />
+          <Route path="edit/:id" element={<StudentEditPage />} />
+        </Route>
+        <Route path="instructor">
+          <Route index element={<InstructorsPage />} />
+          <Route path="add" element={<InstructorAddPage />} />
+          <Route path="edit/:id" element={<InstructorEditPage />} />
+        </Route>
+        <Route path="room">
+          <Route index element={<RoomsPage />} />
+          <Route path="add" element={<NotImplemented />} />
+          <Route path="edit/:id" element={<NotImplemented />} />
+          <Route path="delete/:id" element={<NotImplemented />} />
+        </Route>
+        <Route path="course">
+          <Route index element={<CoursesPage />} />
+          <Route path="add" element={<NotImplemented />} />
+          <Route path="edit/:id" element={<NotImplemented />} />
+          <Route path="delete/:id" element={<NotImplemented />} />
+        </Route>
+        <Route path="batch">
+          <Route index element={<BatchesPage />} />
+          <Route path="add" element={<NotImplemented />} />
+          <Route path="edit/:id" element={<NotImplemented />} />
+          <Route path="delete/:id" element={<NotImplemented />} />
+        </Route>
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );

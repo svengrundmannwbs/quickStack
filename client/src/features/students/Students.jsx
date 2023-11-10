@@ -1,6 +1,6 @@
 import { Row, Container, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import StudentTable from "./components/StudentTable";
+import EditBar from "../../components/EditBar";
 import useAxios from "../../lib/useAxios";
 import axios from "../../services/studentsDb";
 
@@ -20,31 +20,7 @@ function StudentsPage() {
 
   return (
     <Container fluid>
-      <Row md={4} lg={8} className="row align-items-center">
-        <Col xs={0} lg={2}>
-          <h1>Students</h1>
-        </Col>
-        <Col sm={8} md={8} lg={8} xl={10}>
-          <Button
-            as={Link}
-            to="add"
-            variant="success"
-            size="sm"
-            className="text-nowrap"
-          >
-            Add student
-          </Button>
-          {"  "}
-          <Button
-            onClick={() => refetch()}
-            variant="success"
-            size="sm"
-            className="text-nowrap"
-          >
-            Reload
-          </Button>
-        </Col>
-      </Row>
+      <EditBar title={"Students"} btnText={"Add"} refetch={refetch} />
       <Row>
         <Col>
           <StudentTable

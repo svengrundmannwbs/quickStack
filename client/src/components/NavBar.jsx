@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -14,11 +14,21 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/students">Students</Nav.Link>
-            <Nav.Link href="/instructors">Instructors</Nav.Link>
-            <Nav.Link href="/rooms">Rooms</Nav.Link>
-            <Nav.Link href="/courses">Courses</Nav.Link>
-            <Nav.Link href="/batches">Batches</Nav.Link>
+            <Nav.Link as={Link} to="/student">
+              Students
+            </Nav.Link>
+            <Nav.Link as={Link} to="/instructor">
+              Instructors
+            </Nav.Link>
+            <Nav.Link as={Link} to="/room">
+              Rooms
+            </Nav.Link>
+            <Nav.Link as={Link} to="/course">
+              Courses
+            </Nav.Link>
+            <Nav.Link as={Link} to="/batch">
+              Batches
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
